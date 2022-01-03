@@ -1,0 +1,25 @@
+.dropdown {
+  width: 100vw;
+  top: var(--nav-height);
+  right: 0;
+  transform: scaleX(0%);
+  padding: 2rem;
+  position: absolute;
+  display: flex;
+  /* flex-direction: column; */
+  gap: 1.5rem;
+  list-style-type: none;
+  background-color: var(--txt-clr-default);
+  transition: transform 300ms ease-in-out;
+  transform-origin: right;
+  
+}
+
+.dropdown > * {
+  cursor: pointer;
+}
+
+.toggled .dropdown {
+  transform: scaleX(100%);
+}
+

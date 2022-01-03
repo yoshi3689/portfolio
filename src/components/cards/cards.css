@@ -1,0 +1,96 @@
+.cards__wrapper {
+  display: flex;
+  gap: 1.5rem;
+}
+.cards__card {
+  display: block;
+  position: relative;
+  text-align: left;
+  width: 100%;
+  padding: 15rem 0 0;
+  
+  /* since the background-img is set on a different element than this one, 
+  I have to set the overflow to hidden in order to cut the edges */
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+.cards__card__img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+}
+.cards__card__body {
+  --p-card-body: 1.5rem;
+  padding: var(--p-card-body);
+  background: linear-gradient(
+    /* starting with transparent */
+    hsl(0 0% 0% / 0), 
+    /* 30% from the top, it starts to have a fade. that's why the fourth index, opacity is set to a quite small decimal value */
+    hsl(20 0% 0% / 0.4) 10%,
+    hsl(0 0% 0% / 1)
+  );
+
+  /* at about the size of 1000px screen the text at the bottom is visible */
+  transform: translateY(48%);
+  transition: transform 300ms ease;
+}
+
+.cards__card:hover .cards__card__body,
+.cards__card:focus .cards__card__body {
+  transform: translateY(0%);
+  transition-delay: 250ms;
+}
+
+.cards__card__title {
+  font-size: 1.8rem;
+  font-size: clamp(1.3rem, 4vw + 1rem, 2);
+  padding-bottom: calc(var(--p-card-body) / 2);
+  margin-bottom: calc(var(--p-card-body) / 2);
+  transform: translateY(0);
+  transition: transform 150ms ease;
+}
+.cards__card__title::after {
+  content: "";
+  background-color: var(--acc-clr__secondary);
+  position: absolute;
+  height: 4px;
+  width: calc(100% + var(--p-card-body));
+  bottom: 0;
+  left: calc(var(--p-card-body) * -1);
+  /* ani */
+  transition: transform 300ms linear;
+  transform: scaleX(0);
+  transform-origin: left;
+  margin-bottom: var(--m-b);
+}
+ .cards__card:hover .cards__card__title::after,
+ .cards__card:focus .cards__card__title::after {
+  transform: scaleX(1);
+}
+
+
+.cards__card:hover .cards__card__title,
+.cards__card:focus .cards__card__title {
+  /* transform: translateY(-150%); */
+  transition-delay: 350ms;
+}
+
+.cards__card__details {
+  letter-spacing: .5px;
+}
+
+@media (max-width: 769px) {
+  /* animations that could limit the user's full access to 
+  information on the website should be turned off on the mobile version */
+  .cards__card__body {
+    transform: translateY(0);
+  }
+  
+  .cards__card__title::after {
+    transform: scaleX(1);
+  }
+}

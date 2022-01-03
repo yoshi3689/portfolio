@@ -1,0 +1,21 @@
+.portfolio__item {
+  max-height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio__item__link {
+  z-index: 1;
+}
+
+.portfolio__item__link img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+}
+

@@ -1,0 +1,96 @@
+.carousel__container {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  overflow: hidden;
+  grid-template-rows: max-content max-content 1fr;
+  position: relative;
+  height: 100%;
+}
+
+.carousel__container > *:nth-child(3) {
+  grid-row: 3;
+  align-self: center;
+}
+
+.carousel__indicators {
+  align-self: start;
+  display: flex;
+}
+
+.carousel__indicator {
+  font-size: 3rem;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 150ms;
+}
+
+.carousel__indicator--active {
+  opacity: 1;
+}
+
+
+.carousel__controller {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  /* height: 100%; */
+  width: 100%;
+}
+
+ /* .previous */
+ /* .carousel__controller > *:hover  {
+  background-color: aquamarine;
+  opacity: .6;
+} */
+
+.next, .previous {
+  position: absolute;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+
+.next:hover, .previous:hover {
+  transform: scale(1.05) translateY(-3px);
+  color: var(--acc-clr__primary);
+}
+
+.next:active, .previous:active {
+  transform: scale(1) translateY(0px);
+  color: var(--acc-clr__secondary);
+  transition: 100ms ease;
+}
+
+.previous {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.carousel__wrapper {
+  --b-r: 2rem;
+  height: 80%;
+  width: 70%;
+  border-radius: var(--b-r);
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  /* can i include some gap between pics? */
+}
+
+.carousel {
+  width: max-content;
+  display: flex;
+  gap: 3rem;
+  transition: transform 300ms ease-in-out;
+}
+.carousel__media {
+  background-color: aqua;
+  height: 100%;
+  border-radius: var(--b-r);
+}

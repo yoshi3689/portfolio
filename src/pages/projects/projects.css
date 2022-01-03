@@ -1,0 +1,9 @@
+.projects > .portfolio {
+  height: auto;
+  overflow: auto;
+  /* margin-bottom: 3rem; */
+}
+
+.projects > .portfolio > .container {
+  --margin-top: 4rem;
+}

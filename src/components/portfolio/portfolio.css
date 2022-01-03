@@ -1,0 +1,11 @@
+.portfolio {
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+  height: var(--section-height);
+  text-align: center;
+}
+
+.portfolio > .container {
+  height: 100%;
+}
+

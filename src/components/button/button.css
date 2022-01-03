@@ -1,0 +1,22 @@
+.btn__outline {
+  background-color: transparent;
+  border: var(--txt-clr-default) 2px solid;
+}
+
+.btn--large {
+  width: max-content;
+  text-align: center;
+  line-height: 1.1;
+  font-size: 1.5rem;
+  padding: 0.5rem 1.2rem;
+  margin: 1.5rem auto;
+  border-radius: 0.5rem;
+}
+
+
+@media screen and (min-width: 750px) {
+  .btn--large {
+    margin: 1.5rem 0;
+  }
+
+}

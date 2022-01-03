@@ -1,0 +1,88 @@
+.footer {
+  /* margin-top: auto; */
+  position: sticky;
+  bottom: 0;
+  text-align: center;
+}
+
+.footer .container {
+  /* padding: 3rem 0; */
+  flex-direction: column;
+}
+
+.footer h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+  display: inline-block;
+  position: relative;
+}
+
+.footer h4::after {
+  content: '';
+  position: absolute;
+  background-color: var(--clr-accent-400);
+  height: 3px;
+  width: 80%;
+  bottom: 0;
+  left: 0;
+}
+/* align the list items with the title
+ while offsetting the text to left */
+
+.footer .social-links {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.footer .social-links > * + * {
+  margin-left: 1em;
+}
+
+.footer .menu {
+  margin: 0 auto;
+  width: max-content;
+  text-align: left;
+  /* list-style: disc; */
+}
+
+.footer .menu__item {
+  transition: transform 150ms ease;
+}
+.footer .menu__item:hover {
+  transform: translateX(10%);
+}
+
+/* for the custom spacer */
+.footer .menu > * + * {
+  --margin-top: 1rem;
+}
+
+.copy-right {
+  background-color: var(--clr-accent-600);
+}
+
+
+@media (min-width: 650px) {
+  .footer .container {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .footer > .container > *{
+    --margin-top: 2rem;
+    margin-top: var(--margin-top);
+  }
+  .footer .menu__container {
+    --max-width: 40%;
+    --min-width: 13rem;
+  }
+  
+}
+
+@media (min-width: 1000px) {
+  .footer .menu__container {
+    --max-width: 20%;
+    --min-width: 10rem;
+  }
+}
