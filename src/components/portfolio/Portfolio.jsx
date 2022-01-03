@@ -1,11 +1,11 @@
 import React from 'react';
 
 import SlideShow from '../slideShow/SlideShow';
-import { portfolioItems } from '../../config/config';
+
 import "./portfolio.css"
 import Cards from '../cards/Cards';
 
-const Portfolio = ({ path, additionalTxt }) => {
+const Portfolio = ({ path, additionalTxt, portfolioItems }) => {
   return (
     <section className="portfolio">
       <div className="container spacer">

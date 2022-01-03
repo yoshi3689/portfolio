@@ -6,7 +6,8 @@ export default function Hero() {
   return (
     <header className="hero">
       <div className="container">
-      <p className="hero__desc hero__desc--start">
+        <div className="hero__content">
+        <p className="hero__desc hero__desc--start">
             I am the
             <span className="txt--primary">avocado web-dev</span>
         </p>
@@ -22,8 +23,9 @@ export default function Hero() {
           <span>
             I care about people's attention span.
           </span>
-          <Button element="Link" link="/about" type="outline" size="large" innertext="contact" />
+          <Button element="Link" link="/about" type="outline" size="large" position="center" innertext="contact" />
         </p>
+        </div>
       </div>
     </header>
   );

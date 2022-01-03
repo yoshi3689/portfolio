@@ -1,15 +1,36 @@
-import { SiJava, SiJavascript, SiMongodb, SiRedux, SiReact, SiNodedotjs, SiExpress  } from "react-icons/si"
+import {
+  SiJava,
+  SiJavascript,
+  SiMongodb,
+  SiRedux,
+  SiReact,
+  SiNodedotjs,
+  SiExpress,
+} from "react-icons/si";
+import { GrMonitor } from "react-icons/gr";
 
-export const projects = [
+export const PROJECTS = [
   {
-    img: "/img/portfolio_placeholder.jpg",
+    src: "/img/portfolio_placeholder.jpg",
     title: "CLOTHIT",
-    techStacks: [<SiReact />, <SiRedux />, ],
-    startDate: "2021/10/20",
-    endDate: "2021/10/20",
-    duration: "2 weeks",
-    description: "hello",
-    linkToGithub: "github/",
-    linkToDeploy: "deploy"
-  }
-]
+    dates: {
+      label: "Date",
+      items: ["2021/10/20 ~ ", "2021/11/3"],
+    },
+    duration: {
+      label: "Duration",
+      items: ["2 weeks"],
+    },
+    techStacks: {
+      label: "Tech Stack",
+      items: [<SiReact />, <SiRedux />],
+    },
+    description: {
+      label: null,
+      items: [
+        "e-commerce web app for selling clothes with features like cart and checkout",
+      ],
+    },
+    links: ["/github", "/deploy"],
+  },
+];
