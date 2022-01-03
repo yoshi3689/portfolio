@@ -2,19 +2,19 @@
   display: flex;
   gap: 1.5rem;
 }
-.cards__card {
+.card {
   display: block;
   position: relative;
   text-align: left;
   width: 100%;
-  padding: 15rem 0 0;
+  padding: 10rem 0 0;
   
   /* since the background-img is set on a different element than this one, 
   I have to set the overflow to hidden in order to cut the edges */
   overflow: hidden;
   border-radius: 0.5rem;
 }
-.cards__card__img {
+.card__img {
   position: absolute;
   z-index: -1;
   width: 100%;
@@ -23,7 +23,7 @@
   top: 0;
   left: 0;
 }
-.cards__card__body {
+.card__body {
   --p-card-body: 1.5rem;
   padding: var(--p-card-body);
   background: linear-gradient(
@@ -35,17 +35,17 @@
   );
 
   /* at about the size of 1000px screen the text at the bottom is visible */
-  transform: translateY(48%);
+  transform: translateY(80%);
   transition: transform 300ms ease;
 }
 
-.cards__card:hover .cards__card__body,
-.cards__card:focus .cards__card__body {
+.card:hover .card__body,
+.card:focus .card__body {
   transform: translateY(0%);
   transition-delay: 250ms;
 }
 
-.cards__card__title {
+.card__title {
   font-size: 1.8rem;
   font-size: clamp(1.3rem, 4vw + 1rem, 2);
   padding-bottom: calc(var(--p-card-body) / 2);
@@ -53,7 +53,7 @@
   transform: translateY(0);
   transition: transform 150ms ease;
 }
-.cards__card__title::after {
+.card__title::after {
   content: "";
   background-color: var(--acc-clr__secondary);
   position: absolute;
@@ -67,30 +67,32 @@
   transform-origin: left;
   margin-bottom: var(--m-b);
 }
- .cards__card:hover .cards__card__title::after,
- .cards__card:focus .cards__card__title::after {
+ .card:hover .card__title::after,
+ .card:focus .card__title::after {
   transform: scaleX(1);
 }
 
 
-.cards__card:hover .cards__card__title,
-.cards__card:focus .cards__card__title {
+.card:hover .card__title,
+.card:focus .card__title {
   /* transform: translateY(-150%); */
   transition-delay: 350ms;
 }
 
-.cards__card__details {
-  letter-spacing: .5px;
+.card__actions {
+  display: flex;
+  justify-content: start;
+  gap: 1.5rem;
 }
 
 @media (max-width: 769px) {
   /* animations that could limit the user's full access to 
   information on the website should be turned off on the mobile version */
-  .cards__card__body {
+  .card__body {
     transform: translateY(0);
   }
   
-  .cards__card__title::after {
+  .card__title::after {
     transform: scaleX(1);
   }
 }

@@ -8,9 +8,13 @@
   text-align: center;
   line-height: 1.1;
   font-size: 1.5rem;
+  margin: 1.5rem 0;
   padding: 0.5rem 1.2rem;
-  margin: 1.5rem auto;
   border-radius: 0.5rem;
+}
+
+.btn__center {
+  margin: 1.5rem auto;
 }
 
 

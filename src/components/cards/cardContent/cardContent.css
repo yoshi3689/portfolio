@@ -1,0 +1,22 @@
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.card__content__item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.card__content__item > label {
+  margin-right: 1rem;
+}
+
+.card__content__item > span {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+
+} 
