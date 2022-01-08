@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import "./hero.css";
 import Button from "../button/Button";
 
@@ -11,15 +12,16 @@ export default function Hero() {
             I am the
             <span className="txt--primary">avocado web-dev</span>
         </p>
-        <a href="/about" className="hero__profile">
+        <Link to="/about" className="hero__profile">
           <img
             className="hero__profile__pic"
-            src="/img/profile_placeholder.jpg"
+            src="/img/profile_pic.jpeg"
             alt="Yoshi"
           />
-        </a>
+        </Link>
         <p className="hero__desc hero__desc--end txt--body">
-          Hi! I am Yoshiyuki Nagai. 
+          Hi! I am 
+          <strong className="hero__desc__name"> Yoshiyuki Nagai. </strong>
           <span>
             I care about people's attention span.
           </span>

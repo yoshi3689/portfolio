@@ -6,16 +6,16 @@ export default function DropDown({ flag }) {
   return (
     <ul className="dropdown">
       <li>
-        <Link to="/">Home</Link>
+        <Link className="item" to="/">Home</Link>
       </li>
       <li>
-        <Link to="/about">About</Link>
+        <Link className="item" to="/about">About</Link>
       </li>
       <li>
-        <Link to="/projects">Projects</Link>
+        <Link className="item" to="/projects">Projects</Link>
       </li>
       <li>
-        <Link to="/contact">Contact</Link>
+        <Link className="item" to="/contact">Contact</Link>
       </li>
 
     </ul>

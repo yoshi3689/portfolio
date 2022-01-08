@@ -23,3 +23,19 @@
   transform: scaleX(100%);
 }
 
+@media screen and (min-width: 701px) {
+  .dropdown {
+    width: 100%;
+    padding: 0 2rem;
+    position: static;
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+    gap: 1.5rem;
+    list-style-type: none;
+    background-color: var(--txt-clr-default);
+    transition: transform 300ms ease-in-out;
+    transform-origin: right;
+    
+  }
+}
