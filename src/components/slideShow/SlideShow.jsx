@@ -82,7 +82,7 @@ const SlideShow = ({ items }) => {
         {items.map((item, index) => (
           <BsDot
             key={index}
-            className={`carousel__indicator ${index}${index == counter ? " carousel__indicator--active" : ""}`}
+            className={`carousel__indicator ${index}${index.toString() === counter ? " carousel__indicator--active" : ""}`}
             onClick={onDotClick}
           />
         ))}

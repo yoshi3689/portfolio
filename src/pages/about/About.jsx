@@ -1,7 +1,7 @@
 import React from 'react'
 import "./about.css"
 import Hero from "../../components/hero/Hero";
-import Button from '../../components/button/Button';
+// import Button from '../../components/button/Button';
 
 const ABOUT_HOME_CONTENTS = { 
   startSmallTxt: "It's me, ",

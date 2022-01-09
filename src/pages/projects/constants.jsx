@@ -23,7 +23,15 @@ export const PROJECTS = [
     },
     techStacks: {
       label: "Tech Stack",
-      items: [<SiReact />, <SiRedux />],
+      items: [<SiReact />, 
+      <SiRedux />, 
+      <SiJava />,
+        <SiJavascript />,
+        <SiMongodb />,
+        <SiNodedotjs/>,
+        <SiExpress/>,
+        <GrMonitor/>
+      ],
     },
     description: {
       label: null,
