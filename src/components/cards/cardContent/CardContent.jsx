@@ -7,7 +7,7 @@ const CardContent = ({ content }) => {
       {content.map(contentItem => (
         <div key={contentItem.label} className='card__content__item'>
           {contentItem.label && (<label>{contentItem.label + ": " }</label>)}
-          <span className='card__content__itemC'>{contentItem.items.map(item => (<span>{item}</span>))}</span>
+          <span className='card__content__itemC'>{contentItem.items.map((item, index) => (<span key={item + index}>{item}</span>))}</span>
         </div>
       ))}
     </div>

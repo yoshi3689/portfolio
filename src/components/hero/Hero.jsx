@@ -20,8 +20,8 @@ const Hero = ({ startSmallTxt, startBigTxt, img, bottomLeading ,bottomHighlight,
           />
         </Link>
         <p className="hero__desc hero__desc--end txt--body">
-          {bottomContents.map(item => (
-            <span key={item} className="hero__desc__item" >{item} </span>
+          {bottomContents.map((item, index) => (
+            <span key={item + index} className="hero__desc__item" >{item} </span>
           ))}
         </p>
         </div>
