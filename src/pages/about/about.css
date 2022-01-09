@@ -1,3 +1,13 @@
-.about .hero__content {
-  grid-template-rows: 1fr 1fr;
+.about svg:hover {
+  transform: translateY(-2px) scale(1.07);
+}
+
+.about .tech-stacks > * + * {
+  margin-left: 0.3rem;
+}
+
+@media screen and (min-width: 701px) {
+  .about .hero__desc__item {
+    margin-left: 0;
+  }
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom"
 import "./hero.css";
 
-const Hero = ({ startSmallTxt, startBigTxt, img, bottomLeading ,bottomHighlight, bottomContents }) => {
+const Hero = ({ startSmallTxt, startBigTxt, img, imgLink ,bottomLeading ,bottomHighlight, bottomContents }) => {
   
   return (
     <header className="hero">
@@ -12,7 +12,7 @@ const Hero = ({ startSmallTxt, startBigTxt, img, bottomLeading ,bottomHighlight,
             {startSmallTxt}
             <span className="txt--primary">{startBigTxt}</span>
         </p>
-        <Link to="/about" className="hero__profile">
+        <Link to={imgLink} className="hero__profile">
           <img
             className="hero__profile__pic"
             src={img}

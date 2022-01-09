@@ -7,7 +7,10 @@ import {
   SiNodedotjs,
   SiExpress,
 } from "react-icons/si";
-import { GrMonitor } from "react-icons/gr";
+// import { GrMonitor } from "react-icons/gr";
+import Button from '../../components/button/Button'
+import { copyToClipboard } from "../../util/copy";
+import { scrollToBottom } from "../../util/scrollBottom";
 
 export const PROJECTS = [
   {
@@ -30,7 +33,6 @@ export const PROJECTS = [
         <SiMongodb />,
         <SiNodedotjs/>,
         <SiExpress/>,
-        <GrMonitor/>
       ],
     },
     description: {
@@ -42,3 +44,31 @@ export const PROJECTS = [
     links: ["/github", "/deploy"],
   },
 ];
+
+export const HERO_ABOUT_CONTENTS = { 
+  startSmallTxt: "It's me, ",
+  startBigTxt: <>Yoshi<small className="small">(yuki)</small></>,
+  img: "/img/profile_pic.jpeg",
+  imgLink: "/",
+  bottomContents: [
+    <>I'm from Japan, came to Canada 6 months ago.</>,
+    <>I started programming about a year ago.</>,
+    <>My tech stacks are <span className="tech-stacks"><SiReact /><SiRedux /><SiJava /><SiJavascript /><SiMongodb /><SiNodedotjs/><SiExpress/></span></>,
+    <>My interests are <span>podcasts, craft beer, climbing</span></>,
+    <>Feel free to look at <Button element="a" onClick={scrollToBottom} type="text" size="small" position="space-right" innertext={"my resume"}/></> ,
+] 
+};
+
+export const HERO_HOME_CONTENTS = { 
+  startSmallTxt: "My name is",
+  startBigTxt: "Yoshiyuki Nagai",
+  img: "/img/profile_pic.jpeg",
+  imgLink: "/about",
+  bottomHighlight: "",
+  bottomContents: [
+    <>I am a term 2 CST student at BCIT with experience with React.</>,
+    <>Feel free to look at my projects on the <Button element="Link" link="/projects" type="text" size="small" position="space-right" innertext={"portfolio page"}/> or <Button element="" onClick={scrollToBottom} type="text" size="small" position="space-right" innertext={"here."}/></> ,
+    <>Please contact me at <Button element="button" onClick={copyToClipboard} type="text" size="small" position="space-right" innertext={"yoshiyukinagai7@gmail.com"}/></>,
+    // <>My bio is on the <Button element="Link" link="/projects" type="text" size="small" position="space-right" innertext={"about page"}/></>  
+] 
+};

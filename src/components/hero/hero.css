@@ -24,7 +24,14 @@
   width: 60%;
   background-color: azure;
   transform: translate(10px, 10px);
+  transition: 300ms ease-in-out;
 }
+
+.hero__profile:hover {
+  transform: translate(10px, 5px);
+  background-color: var(--acc-clr__primary);
+}
+
 .hero__profile__pic {
   border-radius: 50%;
   width: 100%;
