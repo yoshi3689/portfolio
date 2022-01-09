@@ -50,6 +50,39 @@
   width: 8ch;
 }
 
+.hero__desc__item {
+  display: block;
+}
+
+.alert {
+  position: absolute;
+  white-space: nowrap;
+  border: 1px solid var(--acc-clr__secondary);
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  color: var(--acc-clr__secondary);
+  transition: 200ms;
+  transform: translateY(3px);
+}
+
+.disappear {
+  animation: hideElement 500ms ease-in-out 1000ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hideElement {
+  from {
+    visibility: initial;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+
 @media screen and (min-width: 701px) {
   .hero {
     height: var(--section-height);
@@ -69,8 +102,7 @@
     margin: 1.5rem 0;
     border-radius: 50%;
     width: 100%;
-    max-width: 500px;
-    background-color: azure;
+    max-width: 450px;
   }
 
   .hero__profile__pic {
@@ -94,7 +126,6 @@
   }
 
   .hero .txt--primary {
-    /* margin: 1rem 0 0; */
     font-size: 3rem;
   }
 

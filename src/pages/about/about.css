@@ -1,0 +1,3 @@
+.about .hero__content {
+  grid-template-rows: 1fr 1fr;
+}

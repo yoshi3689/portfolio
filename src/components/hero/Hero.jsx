@@ -1,34 +1,33 @@
 import React from "react";
 import { Link } from "react-router-dom"
 import "./hero.css";
-import Button from "../button/Button";
 
-export default function Hero() {
+const Hero = ({ startSmallTxt, startBigTxt, img, bottomLeading ,bottomHighlight, bottomContents }) => {
+  
   return (
     <header className="hero">
       <div className="container">
         <div className="hero__content">
         <p className="hero__desc hero__desc--start">
-            I am the
-            <span className="txt--primary">avocado web-dev</span>
+            {startSmallTxt}
+            <span className="txt--primary">{startBigTxt}</span>
         </p>
         <Link to="/about" className="hero__profile">
           <img
             className="hero__profile__pic"
-            src="/img/profile_pic.jpeg"
+            src={img}
             alt="Yoshi"
           />
         </Link>
         <p className="hero__desc hero__desc--end txt--body">
-          Hi! I am 
-          <strong className="hero__desc__name"> Yoshiyuki Nagai. </strong>
-          <span>
-            I care about people's attention span.
-          </span>
-          <Button element="Link" link="/about" type="outline" size="large" position="center" innertext="contact" />
+          {bottomContents.map(item => (
+            <span className="hero__desc__item" >{item} </span>
+          ))}
         </p>
         </div>
       </div>
     </header>
   );
 }
+
+export default Hero;

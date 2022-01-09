@@ -101,7 +101,7 @@ const SlideShow = ({ items }) => {
             }}
           >
             {items.map((item, index) => (
-                <div style={getImgStyle(item.src)} className="carousel__media">
+                <div key={item.to + index} style={getImgStyle(item.src)} className="carousel__media">
                   {item.to}
                   {item.desc}
                   {item.title}

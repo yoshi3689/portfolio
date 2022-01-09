@@ -2,24 +2,25 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./button.css"
 
-const Button = ({ element, link, type, size, position, innertext }) => {
+const Button = ({ element, link, type, size, position, innertext, onClick }) => {
   let buttonToRender = "";
+  const className = `btn btn__${type} btn__${position} btn--${size}`;
   switch (element) {
     case "a":
       buttonToRender = ( 
-        <a href={link} className={`btn__${type} btn__${position} btn--${size}`} >
+        <a onClick={onClick} href={link} className={className} >
           {innertext}
           </a> );
       break;
     case "Link":
       buttonToRender = ( 
-        <Link to={link} className={`btn__${type} btn__${position} btn--${size}`} >
+        <Link onClick={onClick} to={link} className={className} >
           {innertext}
           </Link> );
       break;
     default:
       buttonToRender = ( 
-        <button className={`btn__${type} btn__${position} btn--${size}`} >
+        <button onClick={onClick} className={className} >
           {innertext}
           </button> );
       break;
