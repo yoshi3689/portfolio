@@ -5,11 +5,11 @@ import SlideShow from '../slideShow/SlideShow';
 import "./portfolio.css"
 import Cards from '../cards/Cards';
 
-const Portfolio = ({ path, additionalTxt, portfolioItems }) => {
+const Portfolio = ({ path, titleTxt, portfolioItems }) => {
   return (
     <section className="portfolio">
       <div className="container spacer">
-      <h2 className='txt--title' >{additionalTxt}Projects</h2>
+      <h2 className='txt--title' >{titleTxt}</h2>
       {path === "/"
       ? (
         <SlideShow items={portfolioItems} />

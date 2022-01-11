@@ -3,7 +3,7 @@ import { BsDot } from "react-icons/bs";
 import { RiArrowRightSFill, RiArrowLeftSFill } from "react-icons/ri";
 
 import { useLocation } from "react-router";
-// import Card from "../cards/Card";
+import Button from "../button/Button";
 import "./slideShow.css";
 
 const SlideShow = ({ items }) => {
@@ -46,9 +46,9 @@ const SlideShow = ({ items }) => {
   const getImgStyle = (item) => ({
     width: `${wrapperSize.width}px`,
     height: `${wrapperSize.height}px`,
-    background: `url(${item})`,
+    background: `url(${item}) no-repeat`,
     backgroundPosition: "center",
-    backgroundSize: "cover",
+    backgroundSize: "contain",
   });
 
   const onPreviousClick = () => {
@@ -68,21 +68,26 @@ const SlideShow = ({ items }) => {
       console.log(target.parentNode.classList)
       setCounter(target.parentNode.classList[1])
     }
-    
-    
   }
+
+  // const onImgCLick = (src) => {
+  //   return (
+  //       <Modal isClicked={true} src={src} />
+  //   )
+  // }
 
   // I dont't know how to properly make this work
   // const interval = setInterval(onNextClick, 6000);
   // clearInterval(interval);
 
   return (
-    <div className="carousel__container">
+    <>
+      <div className="carousel__container">
       <div className="carousel__indicators">
         {items.map((item, index) => (
           <BsDot
             key={index}
-            className={`carousel__indicator ${index}${index.toString() === counter ? " carousel__indicator--active" : ""}`}
+            className={`carousel__indicator ${index}${index === parseInt(counter) ? " carousel__indicator--active" : ""}`}
             onClick={onDotClick}
           />
         ))}
@@ -102,9 +107,8 @@ const SlideShow = ({ items }) => {
           >
             {items.map((item, index) => (
                 <div key={item.to + index} style={getImgStyle(item.src)} className="carousel__media">
-                  {item.to}
-                  {item.desc}
-                  {item.title}
+                  {/* {item.desc}
+                  {item.title} */}
                   </div>
             ))}
           </div>
@@ -112,7 +116,12 @@ const SlideShow = ({ items }) => {
         <div className="next" onClick={onNextClick}>
           <RiArrowRightSFill />
         </div>
+        <div>
+          <Button element="a" type="outline" size="medium" link={items[1].to} innerText={"Github"} />
+          <Button element="a" type="outline" size="medium" link={items[0].to} innerText={"Try"} />
+        </div>
     </div>
+    </>
   );
 };
 

@@ -27,14 +27,10 @@
   --p-card-body: 1.5rem;
   padding: var(--p-card-body);
   background: linear-gradient(
-    /* starting with transparent */
     hsl(0 0% 0% / 0), 
-    /* 30% from the top, it starts to have a fade. that's why the fourth index, opacity is set to a quite small decimal value */
     hsl(20 0% 0% / 0.4) 10%,
     hsl(0 0% 0% / 1)
   );
-
-  /* at about the size of 1000px screen the text at the bottom is visible */
   transform: translateY(80%);
   transition: transform 300ms ease;
 }
@@ -51,11 +47,11 @@
   padding-bottom: calc(var(--p-card-body) / 2);
   margin-bottom: calc(var(--p-card-body) / 2);
   transform: translateY(0);
-  transition: transform 150ms ease;
+  transition: transform 250ms ease;
 }
 .card__title::after {
   content: "";
-  background-color: var(--acc-clr__secondary);
+  background-color: var(--acc-clr__primary);
   position: absolute;
   height: 4px;
   width: calc(100% + var(--p-card-body));

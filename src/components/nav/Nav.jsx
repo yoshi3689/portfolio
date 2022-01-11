@@ -57,7 +57,7 @@ const NavBar = () => {
             <a href="https://www.linkedin.com/in/yoshiyuki-nagai-14734918a/" >
               <FaLinkedin className="nav__icons__icon item" />
             </a>
-            <a href="https://www.linkedin.com/in/yoshiyuki-nagai-14734918a/" >
+            <a href="https://github.com/yoshi3689" >
               <FaGithub className="nav__icons__icon item" />
             </a>
           </div>
