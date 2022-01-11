@@ -15,7 +15,7 @@ const Cards = ({ items, subItem }) => {
               src={item.src}
               title={item.title}
               additionalClass={item.additionalClass} 
-              content={[item.dates, item.duration, item.techStacks, item.description,  ]} 
+              content={[item.dates, item.techStacks, item.description, item.highlights ]} 
               links={item.links}
             />
           ))}

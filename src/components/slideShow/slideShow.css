@@ -3,7 +3,7 @@
   justify-items: center;
   align-items: center;
   overflow: hidden;
-  grid-template-rows: max-content max-content 1fr;
+  grid-template-rows: max-content max-content 1fr max-content;
   position: relative;
   height: 100%;
 }
@@ -11,6 +11,11 @@
 .carousel__container > *:nth-child(3) {
   grid-row: 3;
   align-self: center;
+}
+
+.carousel__container > *:nth-child(5) {
+  grid-row: 4;
+  display: flex;
 }
 
 .carousel__indicators {
@@ -73,14 +78,12 @@
 
 .carousel__wrapper {
   --b-r: 2rem;
-  height: 80%;
-  width: 70%;
-  border-radius: var(--b-r);
+  height: 90%;
+  width: 75%;
   margin: auto;
   position: relative;
   overflow: hidden;
   z-index: 1;
-  /* can i include some gap between pics? */
 }
 
 .carousel {
@@ -92,5 +95,4 @@
 .carousel__media {
   background-color: aqua;
   height: 100%;
-  border-radius: var(--b-r);
 }

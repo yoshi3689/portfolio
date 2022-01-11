@@ -48,16 +48,22 @@
 }
 .item:hover, .item:hover > * {
   transform: translateY(-2px);
-  color: var(--acc-clr__secondary);
+  color: var(--acc-clr__primary);
 }
 
 .nav__hamburger:hover > span {
+  background-color: var(--acc-clr__primary);
+}
+.nav__hamburger:active > span {
   background-color: var(--acc-clr__secondary);
 }
+
+
 
 .item:active {
   transform: translateY(0px);
   box-shadow: none;
+  color: var(--acc-clr__secondary);
 }
 
 .nav__right {
@@ -85,7 +91,7 @@
 
 .toggled {
   opacity: 1.0;
-  background-color: var(--txt-clr-default);
+  background-color: #fff;
 }
 
 .toggled a {
