@@ -198,7 +198,7 @@ export const HERO_HOME_CONTENTS = {
   bottomHighlight: "",
   bottomContents: [
     <>I am a term 2 CST student at BCIT with experience with React.</>,
-    <>Feel free to look at my projects on the <Button element="Link" link="/projects" type="text" size="small" position="space-right" innerText={"portfolio page"}/> or <Button element="" onClick={scrollToBottom} type="text" size="small" position="space-right" innerText={"here."}/></> ,
+    <>Feel free to look at my projects on the <Button element="Link" link="/projects" type="text" size="small" position="space-right" innerText={"projects page"}/> or <Button element="" onClick={scrollToBottom} type="text" size="small" position="space-right" innerText={"here."}/></> ,
     <>Please contact me at <Button element="button" onClick={copyToClipboard} type="text" size="small" position="space-right" innerText={"yoshiyukinagai7@gmail.com"}/></>,
 ] 
 };
