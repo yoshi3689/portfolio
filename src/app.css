@@ -19,7 +19,7 @@ pushster 400 */
 }
 
 html {
-  height: 100%;
+  min-height: 100%;
   font-size: 16px;
 }
 
@@ -72,7 +72,7 @@ img {
 }
 
 .txt--primary {
-  font-size: 3rem;
+  font-size: 3em;
   line-height: 1.1;
   text-transform: uppercase;
 }
@@ -82,9 +82,19 @@ img {
 }
 
 .txt--title {
-  font-size: 2.5rem;
+  font-size: 2.5em;
+  text-align: center;
 }
 
 .small {
   font-size: 1.75rem;
+}
+
+@media screen and (max-width: 400px) {
+  .txt--primary {
+    font-size: 2.5em;
+  }
+  .txt--title {
+    font-size: 2em;
+  }
 }

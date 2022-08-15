@@ -22,7 +22,7 @@ const SlideShow = ({ items }) => {
           children[0].clientWidth * children.length) /
         (children.length - 1);
       setWrapperSize({
-        height: wrapperRef.current.clientHeight,
+        height: wrapperRef.current.clientHeight - 10,
         width: wrapperRef.current.clientWidth,
         xScrollOffset: wrapperRef.current.clientWidth + carouselGap,
       });
@@ -70,11 +70,7 @@ const SlideShow = ({ items }) => {
     }
   }
 
-  // const onImgCLick = (src) => {
-  //   return (
-  //       <Modal isClicked={true} src={src} />
-  //   )
-  // }
+
 
   // I dont't know how to properly make this work
   // const interval = setInterval(onNextClick, 6000);
