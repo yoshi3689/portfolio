@@ -7,9 +7,28 @@ pushster 400 */
   --section-height: calc(100vh - var(--nav-height));
   --prim-c: #15023a;
   --txt-clr-default: #fff; 
-  --acc-clr__primary: rgb(240, 201, 45);
-  --acc-clr__secondary: rgb(245, 136, 40);
-  --bg-clr-universal: rgb(69, 69, 91);
+  --special-section-clr: #E6E6E9;
+  --acc-clr__txt:#9ED8DB;
+  --acc-clr__primary: #FF7F51;
+  --acc-clr__secondary: #e8490f;
+  --bg-clr-universal: #004E98;
+
+  /*
+    beach-vibe
+    #D64045
+    #E9FFF9
+    #9ED8DB
+    #467599
+    #1D3354
+
+    monotone
+    000000
+    #66666E
+    9999A1
+    #E6E6E9
+    #F4F4F6
+
+    */
 }
 
 *, *::after, *::before {

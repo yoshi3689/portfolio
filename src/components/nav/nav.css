@@ -91,7 +91,7 @@
 
 .toggled {
   opacity: 1.0;
-  background-color: #fff;
+  background-color: var(--special-section-clr);
 }
 
 .toggled a {

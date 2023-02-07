@@ -16,7 +16,7 @@
 
 .btn__text {
   border: none;
-  color: rgb(164, 154, 154);
+  color: var(--acc-clr__txt);
   background-color: transparent;
   font-weight: 600;
   display: inline-block;
@@ -25,12 +25,12 @@
 .btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.3);
-  color: var(--acc-clr__primary);
+  /* color: var(--acc-clr__primary); */
 }
 .btn:active {
   transform: translateY(0px);
   box-shadow: unset;
-  color: var(--acc-clr__secondary);
+  color: var(--acc-clr__primary);
 }
 
 .btn--small {

@@ -9,7 +9,7 @@
   /* flex-direction: column; */
   gap: 1.5rem;
   list-style-type: none;
-  background-color: #fff;
+  background-color: var(--special-section-clr);
   transition: transform 300ms ease-in-out;
   transform-origin: right;
 }
