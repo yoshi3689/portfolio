@@ -6,6 +6,7 @@
   grid-template-rows: max-content max-content 1fr max-content;
   position: relative;
   height: 100%;
+  padding-bottom: 2rem;
 }
 
 .carousel__container > *:nth-child(3) {

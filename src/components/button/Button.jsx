@@ -8,7 +8,7 @@ const Button = ({ element, link, type, size, position, innerText, onClick }) => 
   switch (element) {
     case "a":
       buttonToRender = ( 
-        <a onClick={onClick} href={link} className={className} >
+        <a onClick={onClick} href={link} className={className} target="_blank" rel="noreferrer" >
           {innerText}
           </a> );
       break;

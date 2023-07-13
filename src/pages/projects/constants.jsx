@@ -176,29 +176,114 @@ export const PROJECTS = [
   },
 ];
 
-export const HERO_ABOUT_CONTENTS = { 
+export const HERO_ABOUT_CONTENTS = {
   startSmallTxt: "It's me, ",
-  startBigTxt: <>Yoshi<small className="small">(yuki)</small></>,
+  startBigTxt: (
+    <>
+      Yoshi<small className="small">(yuki)</small>
+    </>
+  ),
   img: "/img/profile_pic.jpeg",
   imgLink: "/",
   bottomContents: [
-    <>I'm from Japan, came to Canada 6 months ago.</>,
-    <>I started programming about a year ago.</>,
-    <>My tech stacks are <span className="tech-stacks"><SiReact /><SiRedux /><SiJava /><SiJavascript /><SiMongodb /><SiNodedotjs/><SiExpress/></span> .</>,
-    <>My interests are <span>podcasts, craft beer, climbing</span>.</>,
-    <>Feel free to look at <Button element="a" type="text" size="small" link={"https://www.linkedin.com/in/yoshiyuki-nagai-14734918a/"} position="space-right" innerText={"my resume"}/></> ,
-] 
+    <>
+      I recently graduated from{" "}
+      <Button
+        element="a"
+        type="text"
+        size="small"
+        link={
+          "https://www.bcit.ca/programs/computer-systems-technology-diploma-full-time-5500dipma/#overview"
+        }
+        position="space-right"
+        innerText={"CST"}
+      />{" "}
+      in
+      <Button
+        element="a"
+        type="text"
+        size="small"
+        link={
+          "https://www.bcit.ca/programs/computer-systems-technology-diploma-full-time-5500dipma/#details"
+        }
+        position="space-right"
+        innerText={"Information Systems"}
+      />{" "}
+      option at BCIT. 
+    </>,
+    <>
+      My tech stacks are{" "}
+      <span className="tech-stacks">
+        <SiReact />
+        <SiRedux />
+        <SiJava />
+        <SiJavascript />
+        <SiMongodb />
+        <SiNodedotjs />
+        <SiExpress />
+      </span>{" "}
+      .
+    </>,
+    <>
+      My interests include <span>podcasts, EDM, exercising</span>.
+    </>,
+    <>
+      Feel free to look at{" "}
+      <Button
+        element="a"
+        type="text"
+        size="small"
+        link={"https://www.linkedin.com/in/yoshiyuki-nagai-14734918a/"}
+        position="space-right"
+        innerText={"my resume"}
+      />!
+    </>,
+  ],
 };
 
-export const HERO_HOME_CONTENTS = { 
+export const HERO_HOME_CONTENTS = {
   startSmallTxt: "My name is",
   startBigTxt: "Yoshiyuki Nagai",
   img: "/img/profile_pic.jpeg",
   imgLink: "/about",
   bottomHighlight: "",
   bottomContents: [
-    <>I am a term 2 CST student at BCIT with experience with React.</>,
-    <>Feel free to look at my projects on the <Button element="Link" link="/projects" type="text" size="small" position="space-right" innerText={"projects page"}/> or <Button element="" onClick={scrollToBottom} type="text" size="small" position="space-right" innerText={"here."}/></> ,
-    <>Please contact me at <Button element="button" onClick={copyToClipboard} type="text" size="small" position="space-right" innerText={"yoshiyukinagai7@gmail.com"}/></>,
-] 
+    <>
+      I am a recent graduate with experience in Full-stack Web Development.
+      <br />{" "}
+    </>,
+    <>
+      Feel free to look at my projects on the{" "}
+      <Button
+        element="Link"
+        onClick={scrollToBottom}
+        link="/projects"
+        type="text"
+        size="small"
+        position="space-right"
+        innerText={"projects page"}
+      />{" "}
+      or{" "}
+      <Button
+        element="a"
+        type="text"
+        size="small"
+        position="space-right"
+        innerText={"Github"}
+      />
+      .{" "}
+    </>,
+    <>
+      Feel free to{" "}
+      <Button
+        element="a"
+        type="text"
+        size="small"
+        link={"mailto:yoshiyukinagai7@gmail.com"}
+        position="space-right"
+        innerText={"email me for inquiries"}
+      />
+      !
+    </>,
+  ],
 };
